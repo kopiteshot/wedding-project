@@ -324,6 +324,30 @@
     .g15 { grid-column: span 4; grid-row: span 4; }
     .g16 { grid-column: span 4; grid-row: span 4; }
     .g17 { grid-column: span 12; grid-row: span 6; } /* full-width panoramic */
+    .g18 { grid-column: span 4; grid-row: span 5; }
+    .g19 { grid-column: span 4; grid-row: span 5; }
+    .g20 { grid-column: span 4; grid-row: span 5; }
+    .g21 { grid-column: span 12; grid-row: span 6; }
+
+    /* ── GALLERY LOAD MORE ─────────── */
+    .gallery-extra { display: none; }
+    .gallery-extra.show { display: block; animation: galFadeIn .45s ease both; }
+    @keyframes galFadeIn {
+      from { opacity: 0; transform: scale(.96); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    .load-more-wrap { text-align: center; margin-top: 2.8rem; }
+    .btn-load-more {
+      display: inline-flex; align-items: center; gap: .7rem;
+      padding: .9rem 2.6rem;
+      font-family: var(--sans); font-size: .78rem; letter-spacing: .12em;
+      color: var(--deep); background: transparent;
+      border: 1px solid var(--blush); border-radius: 3px;
+      cursor: pointer; font-weight: 500;
+      transition: background .22s, color .22s, border-color .22s, transform .22s;
+    }
+    .btn-load-more:hover { background: var(--rose); color: #fff; border-color: var(--rose); transform: translateY(-2px); }
+    .btn-load-more svg { width: 16px; height: 16px; stroke: currentColor; }
 
     /* ── RSVP ──────────────────────── */
     #rsvp { background: linear-gradient(160deg, #f9ede6, var(--ivory)); }
@@ -496,8 +520,9 @@
         grid-auto-rows: 180px;
       }
       .g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8,
-      .g9,.g10,.g11,.g12,.g13,.g14,.g15,.g16 { grid-column: span 1; grid-row: span 1; }
-      .g17 { grid-column: span 3; grid-row: span 2; }
+      .g9,.g10,.g11,.g12,.g13,.g14,.g15,.g16,
+      .g18,.g19,.g20 { grid-column: span 1; grid-row: span 1; }
+      .g17,.g21 { grid-column: span 3; grid-row: span 2; }
     }
     @media (max-width: 600px) {
       section { padding: 4rem 1.2rem; }
@@ -507,7 +532,7 @@
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 160px;
       }
-      .g17 { grid-column: span 2; }
+      .g17,.g21 { grid-column: span 2; }
     }
   </style>
 </head>
@@ -648,18 +673,17 @@
               <circle cx="12" cy="10" r="3"/>
             </svg>
           </div>
-          <p class="detail-label">LỄ VU QUY</p>
-          <h3 class="detail-title">Nhà Gái</h3>
+          <p class="detail-label">BỮA CƠM THÂN MẬT</p>
+          <h3 class="detail-title">Tư Gia Nhà Trai</h3>
           <div class="detail-body">
-            <strong>08:00 Sáng</strong><br>
-            Địa chỉ nhà gái<br>
-            Quận / Huyện<br>
-            Thành phố / Tỉnh<br>
+            <strong>10:30 Sáng</strong><br>
+            Thôn 14 Xuân Kiên<br>
+            Xã Xuân Trường, Tỉnh Ninh Bình<br>
             <br>
-            Đón khách từ <strong>07:30</strong>.<br>
-            Kính mời quý khách có mặt trước <strong>07:50</strong>.
+            Đón khách từ <strong>10:00</strong>.<br>
+            Kính mời quý khách có mặt trước <strong>10:20</strong>.
           </div>
-          <a href="#" class="map-btn">
+          <a href="https://maps.google.com/?q=Thôn+14+Xuân+Kiên,+Xuân+Trường,+Ninh+Bình" target="_blank" rel="noopener" class="map-btn">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polygon points="3 11 22 2 13 21 11 13 3 11"/>
             </svg>
@@ -673,18 +697,17 @@
               <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
             </svg>
           </div>
-          <p class="detail-label">TIỆC CƯỚI</p>
-          <h3 class="detail-title">Nhà Hàng</h3>
+          <p class="detail-label">LỄ THÀNH HÔN</p>
+          <h3 class="detail-title">Tư Gia Nhà Trai</h3>
           <div class="detail-body">
-            <strong>18:00 Tối</strong><br>
-            Tên nhà hàng / trung tâm tiệc cưới<br>
-            Địa chỉ chi tiết<br>
-            Quận / Thành phố<br>
+            <strong>14:05 Chiều</strong><br>
+            Thôn 14 Xuân Kiên<br>
+            Xã Xuân Trường, Tỉnh Ninh Bình<br>
             <br>
-            Khai tiệc lúc <strong>18:30</strong>.<br>
-            Chương trình văn nghệ từ <strong>19:00</strong>.
+            Khai lễ lúc <strong>14:05</strong>.<br>
+            Rất hân hạnh được đón tiếp!
           </div>
-          <a href="#" class="map-btn">
+          <a href="https://maps.google.com/?q=Thôn+14+Xuân+Kiên,+Xuân+Trường,+Ninh+Bình" target="_blank" rel="noopener" class="map-btn">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polygon points="3 11 22 2 13 21 11 13 3 11"/>
             </svg>
@@ -699,17 +722,18 @@
               <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
             </svg>
           </div>
-          <p class="detail-label">LỜI NHẮN</p>
-          <h3 class="detail-title">Ghi Chú</h3>
+          <p class="detail-label">GIA ĐÌNH HAI HỌ</p>
+          <h3 class="detail-title">Thông Tin</h3>
           <div class="detail-body">
-            Trang phục: <strong>Lịch sự, trang trọng</strong><br>
+            <strong>Nhà Trai</strong><br>
+            Bố Mẹ: Phạm Hải Đăng &amp; Nguyễn Thị Mừng<br>
+            Chú rể: Phạm Quang Đại<br>
+            Thôn 14 Xuân Kiên, Xuân Trường — Ninh Bình<br>
             <br>
-            Nếu quý khách có nhu cầu đặt phòng khách sạn,
-            vui lòng liên hệ chúng mình để được hỗ trợ
-            giá ưu đãi tại các khách sạn gần địa điểm tổ chức.<br>
-            <br>
-            Mọi thắc mắc xin liên hệ:<br>
-            <strong>0909 xxx xxx</strong>
+            <strong>Nhà Gái</strong><br>
+            Bố Mẹ: Ngô Đức Giác &amp; Nguyễn Thị Xuyến<br>
+            Cô dâu: Ngô Thị Hoài Anh<br>
+            Xóm 1 (Xóm 3 cũ), Xuân Hưng — Ninh Bình
           </div>
           <a href="#rsvp" class="map-btn">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -739,6 +763,28 @@
         <div class="gallery-item g6"><img src="images/KEIY8827.JPG" alt="Ảnh cưới Hoài Anh và Quang Đại" /></div>
         <div class="gallery-item g7"><img src="images/KEIY8857.JPG" alt="Ảnh cưới Hoài Anh và Quang Đại" /></div>
         <div class="gallery-item g8"><img src="images/KEIY8966.JPG" alt="Ảnh cưới Hoài Anh và Quang Đại" /></div>
+        <!-- extra photos — revealed by "load more" -->
+        <div class="gallery-item g9  gallery-extra"><img src="images/KEIY9073.JPG"  alt="Ảnh cưới Hoài Anh và Quang Đại" /></div>
+        <div class="gallery-item g10 gallery-extra"><img src="images/KEIY9094.jpeg" alt="Ảnh cưới Hoài Anh và Quang Đại" /></div>
+        <div class="gallery-item g11 gallery-extra"><img src="images/KEIY9153.JPG"  alt="Ảnh cưới Hoài Anh và Quang Đại" /></div>
+        <div class="gallery-item g12 gallery-extra"><img src="images/KEIY9292.JPG"  alt="Ảnh cưới Hoài Anh và Quang Đại" /></div>
+        <div class="gallery-item g13 gallery-extra"><img src="images/KEIY9349.JPG"  alt="Ảnh cưới Hoài Anh và Quang Đại" /></div>
+        <div class="gallery-item g14 gallery-extra"><img src="images/KEIY9447.jpeg" alt="Ảnh cưới Hoài Anh và Quang Đại" /></div>
+        <div class="gallery-item g15 gallery-extra"><img src="images/KEIY9489.JPG"  alt="Ảnh cưới Hoài Anh và Quang Đại" /></div>
+        <div class="gallery-item g16 gallery-extra"><img src="images/KEIY9632.JPG"  alt="Ảnh cưới Hoài Anh và Quang Đại" /></div>
+        <div class="gallery-item g17 gallery-extra"><img src="images/KEIY9879.JPG"  alt="Ảnh cưới Hoài Anh và Quang Đại" /></div>
+        <div class="gallery-item g18 gallery-extra"><img src="images/KEIY9911.JPG"  alt="Ảnh cưới Hoài Anh và Quang Đại" /></div>
+        <div class="gallery-item g19 gallery-extra"><img src="images/KEIY9962.JPG"  alt="Ảnh cưới Hoài Anh và Quang Đại" /></div>
+        <div class="gallery-item g20 gallery-extra"><img src="images/IMG_4221.JPG"  alt="Ảnh cưới Hoài Anh và Quang Đại" /></div>
+        <div class="gallery-item g21 gallery-extra"><img src="images/IMG_4222.JPG"  alt="Ảnh cưới Hoài Anh và Quang Đại" /></div>
+      </div>
+      <div class="load-more-wrap" id="loadMoreWrap">
+        <button class="btn-load-more" id="loadMoreBtn" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+          </svg>
+          Xem thêm ảnh
+        </button>
       </div>
     </div>
   </section>
@@ -877,13 +923,13 @@
     function updateCountdown() {
       const diff = weddingDate - Date.now();
       if (diff <= 0) {
-        document.getElementById('cd-days').textContent  = '000';
+        document.getElementById('cd-days').textContent  = '00';
         document.getElementById('cd-hours').textContent = '00';
         document.getElementById('cd-mins').textContent  = '00';
         document.getElementById('cd-secs').textContent  = '00';
         return;
       }
-      document.getElementById('cd-days').textContent  = pad(Math.floor(diff / 86400000), 3);
+      document.getElementById('cd-days').textContent  = pad(Math.floor(diff / 86400000));
       document.getElementById('cd-hours').textContent = pad(Math.floor((diff % 86400000) / 3600000));
       document.getElementById('cd-mins').textContent  = pad(Math.floor((diff % 3600000) / 60000));
       document.getElementById('cd-secs').textContent  = pad(Math.floor((diff % 60000) / 1000));
@@ -904,13 +950,17 @@
     const lightboxClose = document.getElementById('lightboxClose');
     const lbPrev        = document.getElementById('lbPrev');
     const lbNext        = document.getElementById('lbNext');
-    const galleryItems  = Array.from(document.querySelectorAll('.gallery-item img'));
-    let currentLbIdx    = 0;
+    let galleryImgs = [];
+    let currentLbIdx = 0;
 
+    function visibleGalleryImgs() {
+      return Array.from(document.querySelectorAll('.gallery-item:not(.gallery-extra) img, .gallery-item.gallery-extra.show img'));
+    }
     function openLightbox(idx) {
+      galleryImgs = visibleGalleryImgs();
       currentLbIdx = idx;
-      lightboxImg.src = galleryItems[idx].src;
-      lightboxImg.alt = galleryItems[idx].alt;
+      lightboxImg.src = galleryImgs[idx].src;
+      lightboxImg.alt = galleryImgs[idx].alt;
       lightbox.classList.add('open');
       document.body.style.overflow = 'hidden';
     }
@@ -919,14 +969,25 @@
       document.body.style.overflow = '';
     }
     function showLbImg(idx) {
-      currentLbIdx = (idx + galleryItems.length) % galleryItems.length;
-      lightboxImg.src = galleryItems[currentLbIdx].src;
-      lightboxImg.alt = galleryItems[currentLbIdx].alt;
+      currentLbIdx = (idx + galleryImgs.length) % galleryImgs.length;
+      lightboxImg.src = galleryImgs[currentLbIdx].src;
+      lightboxImg.alt = galleryImgs[currentLbIdx].alt;
     }
 
-    document.querySelectorAll('.gallery-item').forEach((item, idx) => {
-      item.addEventListener('click', () => openLightbox(idx));
-    });
+    function bindGallery() {
+      document.querySelectorAll('.gallery-item').forEach((item, idx) => {
+        item.onclick = () => {
+          const visibleItems = Array.from(document.querySelectorAll(
+            '.gallery-item:not(.gallery-extra) img, .gallery-item.gallery-extra.show img'
+          ));
+          const clickedImg = item.querySelector('img');
+          const realIdx = visibleItems.indexOf(clickedImg);
+          openLightbox(realIdx >= 0 ? realIdx : idx);
+        };
+      });
+    }
+    bindGallery();
+
     lightboxClose.addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
     lbPrev.addEventListener('click', e => { e.stopPropagation(); showLbImg(currentLbIdx - 1); });
@@ -936,6 +997,16 @@
       if (e.key === 'Escape')      closeLightbox();
       if (e.key === 'ArrowLeft')   showLbImg(currentLbIdx - 1);
       if (e.key === 'ArrowRight')  showLbImg(currentLbIdx + 1);
+    });
+
+    // ── Load more ─────────────────────────────────
+    document.getElementById('loadMoreBtn').addEventListener('click', () => {
+      const extras = document.querySelectorAll('.gallery-extra');
+      extras.forEach((el, i) => {
+        el.style.animationDelay = (i * 40) + 'ms';
+        el.classList.add('show');
+      });
+      document.getElementById('loadMoreWrap').style.display = 'none';
     });
 
     // ── RSVP: toggle QR & guests field on attendance change ───
