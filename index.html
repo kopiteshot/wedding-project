@@ -644,18 +644,57 @@
     }
 
     /* 10-photo layout — rows sum to 12 columns each block */
-    .g1 { grid-column: span 5; grid-row: span 7; }
-    .g2 { grid-column: span 4; grid-row: span 4; }
-    .g3 { grid-column: span 3; grid-row: span 4; }
-    .g4 { grid-column: span 4; grid-row: span 3; }
-    .g5 { grid-column: span 3; grid-row: span 3; }
-    .g6 { grid-column: span 6; grid-row: span 5; }
-    .g7 { grid-column: span 6; grid-row: span 5; }
-    .g8 { grid-column: span 4; grid-row: span 5; }
-    .g9 { grid-column: span 4; grid-row: span 5; }
-    .g10 { grid-column: span 4; grid-row: span 5; }
+    .g1 {
+      grid-column: span 5;
+      grid-row: span 7;
+    }
 
- 
+    .g2 {
+      grid-column: span 4;
+      grid-row: span 4;
+    }
+
+    .g3 {
+      grid-column: span 3;
+      grid-row: span 4;
+    }
+
+    .g4 {
+      grid-column: span 4;
+      grid-row: span 3;
+    }
+
+    .g5 {
+      grid-column: span 3;
+      grid-row: span 3;
+    }
+
+    .g6 {
+      grid-column: span 6;
+      grid-row: span 5;
+    }
+
+    .g7 {
+      grid-column: span 6;
+      grid-row: span 5;
+    }
+
+    .g8 {
+      grid-column: span 4;
+      grid-row: span 5;
+    }
+
+    .g9 {
+      grid-column: span 4;
+      grid-row: span 5;
+    }
+
+    .g10 {
+      grid-column: span 4;
+      grid-row: span 5;
+    }
+
+
 
     /* ── RSVP ──────────────────────── */
     #rsvp {
@@ -1175,12 +1214,20 @@
         grid-auto-rows: 180px;
       }
 
-      .g1, .g6 {
+      .g1,
+      .g6 {
         grid-column: span 2;
         grid-row: span 1;
       }
 
-      .g2, .g3, .g4, .g5, .g7, .g8, .g9, .g10 {
+      .g2,
+      .g3,
+      .g4,
+      .g5,
+      .g7,
+      .g8,
+      .g9,
+      .g10 {
         grid-column: span 1;
         grid-row: span 1;
       }
@@ -1204,7 +1251,16 @@
         grid-auto-rows: 160px;
       }
 
-      .g1, .g2, .g3, .g4, .g5, .g6, .g7, .g8, .g9, .g10 {
+      .g1,
+      .g2,
+      .g3,
+      .g4,
+      .g5,
+      .g6,
+      .g7,
+      .g8,
+      .g9,
+      .g10 {
         grid-column: span 1;
         grid-row: span 1;
       }
@@ -1384,6 +1440,7 @@
       <div class="divider-line fade-in"><span>&#10022;</span></div>
       <div class="details-grid">
 
+        <!-- NHÀ TRAI -->
         <div class="detail-card fade-in">
           <div class="detail-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1391,48 +1448,69 @@
               <circle cx="12" cy="10" r="3" />
             </svg>
           </div>
-          <p class="detail-label">BỮA CƠM THÂN MẬT</p>
-          <h3 class="detail-title">Tư Gia Nhà Trai</h3>
+          <p class="detail-label">THÔNG TIN TIỆC MỪNG</p>
+          <h3 class="detail-title">Nhà Trai</h3>
           <div class="detail-body">
-            <strong>10:30 Sáng</strong><br>
-            Thôn 14 Xuân Kiên<br>
-            Xã Xuân Trường, Tỉnh Ninh Bình<br>
+            <strong>Tiệc tối:</strong> 17:00 — Ngày 31/05<br>
+            <strong>Tiệc trưa:</strong> 10:30 — Ngày 01/06<br>
             <br>
-            Đón khách từ <strong>10:00</strong>.<br>
-            Kính mời quý khách có mặt trước <strong>10:20</strong>.
+            <strong>Địa điểm:</strong><br>
+            Thôn 14 Xuân Kiên<br>
+            Xuân Trường, Ninh Bình
           </div>
-          <a href="https://maps.app.goo.gl/59Xof9ZSUiGPPxe9A" target="_blank" rel="noopener" class="map-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="3 11 22 2 13 21 11 13 3 11" />
-            </svg>
-            Xem Bản Đồ
-          </a>
+          <div style="margin-top: 1.5rem; display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap;">
+            <a href="https://maps.app.goo.gl/59Xof9ZSUiGPPxe9A" target="_blank" rel="noopener" class="map-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="3 11 22 2 13 21 11 13 3 11" />
+              </svg>
+              Xem Bản Đồ
+            </a>
+            <a href="#rsvp" class="map-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+              Xác Nhận Tham Dự
+            </a>
+          </div>
         </div>
 
+        <!-- NHÀ GÁI -->
         <div class="detail-card fade-in">
           <div class="detail-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
             </svg>
           </div>
-          <p class="detail-label">LỄ THÀNH HÔN</p>
-          <h3 class="detail-title">Tư Gia Nhà Trai</h3>
+          <p class="detail-label">THÔNG TIN TIỆC MỪNG</p>
+          <h3 class="detail-title">Nhà Gái</h3>
           <div class="detail-body">
-            <strong>14:05 Chiều</strong><br>
-            Thôn 14 Xuân Kiên<br>
-            Xã Xuân Trường, Tỉnh Ninh Bình<br>
+            <strong>Tiệc tối:</strong> 17:00 — Ngày 31/05<br>
+            <strong>Tiệc trưa:</strong> 10:30 — Ngày 01/06<br>
             <br>
-            Khai lễ lúc <strong>14:05</strong>.<br>
-            Rất hân hạnh được đón tiếp!
+            <strong>Địa điểm:</strong><br>
+            Xóm 1 (Xóm 3 cũ)<br>
+            Xuân Hưng, Ninh Bình
           </div>
-          <a href="https://maps.app.goo.gl/59Xof9ZSUiGPPxe9A" target="_blank" rel="noopener" class="map-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="3 11 22 2 13 21 11 13 3 11" />
-            </svg>
-            Xem Bản Đồ
-          </a>
+          <div style="margin-top: 1.5rem; display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap;">
+            <a href="https://www.google.com/maps/place/20%C2%B017'26.5%22N+106%C2%B023'37.2%22E/@20.290701,106.3911021,17z/data=!3m1!4b1!4m4!3m3!8m2!3d20.290701!4d106.393677!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank" rel="noopener" class="map-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="3 11 22 2 13 21 11 13 3 11" />
+              </svg>
+              Xem Bản Đồ
+            </a>
+            <a href="#rsvp" class="map-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+              Xác Nhận Tham Dự
+            </a>
+          </div>
         </div>
 
+        <!-- LỄ VU QUY & THÀNH HÔN -->
         <div class="detail-card fade-in">
           <div class="detail-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1440,38 +1518,31 @@
               <path d="M7 11V7a5 5 0 0 1 10 0v4" />
             </svg>
           </div>
-          <p class="detail-label">GIA ĐÌNH HAI HỌ</p>
-          <h3 class="detail-title">Thông Tin</h3>
+          <p class="detail-label">LỄ THÀNH HÔN</p>
+          <h3 class="detail-title">Lễ Thành Hôn</h3>
           <div class="detail-body">
-            <strong>Nhà Trai</strong><br>
-            Bố Mẹ: Phạm Hải Đăng &amp; Nguyễn Thị Mừng<br>
-            Chú rể: Phạm Quang Đại<br>
-            Thôn 14 Xuân Kiên, Xuân Trường — Ninh Bình<br>
+
+            Khai lễ lúc: <strong>14:00 Chiều</strong> — Ngày 01/06<br>
             <br>
-            <strong>Nhà Gái</strong><br>
-            Bố Mẹ: Ngô Đức Giác &amp; Nguyễn Thị Xuyến<br>
-            Cô dâu: Ngô Thị Hoài Anh<br>
-            Xóm 1 (Xóm 3 cũ), Xuân Hưng — Ninh Bình
+            <br>
+            <strong>Địa điểm:</strong><br>
+            Thôn 14 Xuân Kiên, Xuân Trường, Ninh Bình
           </div>
-          <a href="https://maps.app.goo.gl/59Xof9ZSUiGPPxe9A" target="_blank" rel="noopener" class="map-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="3 11 22 2 13 21 11 13 3 11" />
-            </svg>
-            Nhà Trai
-          </a>
-          <a href="https://maps.app.goo.gl/4AuaArmDogh2Rvvi8" target="_blank" rel="noopener" class="map-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="3 11 22 2 13 21 11 13 3 11" />
-            </svg>
-            Nhà Gái
-          </a>
-          <a href="#rsvp" class="map-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-            </svg>
-            Xác Nhận Tham Dự
-          </a>
+          <div style="margin-top: 1.5rem; display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap;">
+            <a href="https://maps.app.goo.gl/59Xof9ZSUiGPPxe9A" target="_blank" rel="noopener" class="map-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="3 11 22 2 13 21 11 13 3 11" />
+              </svg>
+              Xem Bản Đồ
+            </a>
+            <a href="#rsvp" class="map-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+              Xác Nhận Tham Dự
+            </a>
+          </div>
         </div>
 
       </div>
@@ -1714,7 +1785,7 @@
       if (e.key === 'ArrowRight') showLbImg(currentLbIdx + 1);
     });
 
- 
+
 
     // ── RSVP: toggle QR & guests field on attendance change ───
     document.querySelectorAll('input[name="attendance"]').forEach(radio => {
